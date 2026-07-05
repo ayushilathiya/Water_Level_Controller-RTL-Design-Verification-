@@ -32,21 +32,4 @@ output showing `[PASS]` on each check and `==== ALL TESTS PASSED ====`).
 - Outputs are registered (Moore-style) to avoid combinational glitches feeding the motor
   driver.
 
-## What this project does NOT yet claim
-This is RTL + verification only — it has not been run through synthesis or
-place-and-route, so it is not (yet) a true RTL-to-GDSII flow. If you want to extend it
-into one (e.g. via the open-source OpenROAD/OpenLane flow on the SKY130 PDK), that's a
-separate, doable next step — ask me when you're ready and I'll set it up.
 
-## Resume bullets that are now fully defensible
-Use these in place of the current project bullets:
-
-> **Smart Water Level Controller (RTL Design & Verification)** | Verilog, FSM, Testbench, Icarus Verilog
-> - Designed a 4-state FSM in Verilog RTL to control a water pump motor from three level
->   sensors, implementing hysteresis logic to prevent motor chatter near thresholds.
-> - Built a self-checking testbench (8 automated assertions) verifying FSM transitions,
->   hysteresis behavior, and asynchronous reset handling at both startup and mid-operation.
-> - Simulated and functionally verified the design using Icarus Verilog, confirming
->   correct motor control logic across the full fill/drain cycle.
-
-Every noun in those three lines is now backed by a file you can open, run, and explain.
